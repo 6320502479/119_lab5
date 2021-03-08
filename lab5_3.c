@@ -1,31 +1,34 @@
 #include <stdio.h>
 int main()
 {
-    int N,i[3]={2,3,5},j=2,k=1,l=0,re=2;
+    int N,i[3]={2,3,5},k=1,num,j=0,re=2;
     scanf("%d",&N);
-    j=re;
-    while(j<N)
+    num=re;
+    while(k<=N)
     {
-        if(j%i[l]==0)
+        while(num!=1)
         {
-            j/=i[l];
-            while(j%i[l]==0)
+            if(num%i[j]==0)
             {
-                j/=i[l];
+                num/=i[j];
+            }
+            else
+            {
+                j++;
+                if(j>2)
+                {
+                    re++;
+                    break;
+                }
+
             }
         }
-        else
+        if(num==1)
         {
-            l++;
-
-        }
-        if(j==1)
-        {
-            re++;
             k++;
+            re++;
         }
-        if(k==N)
-            printf("%d",re);
-
+        j==0;
     }
+    printf("%d",re);
 }
