@@ -1,40 +1,26 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int n,count=1,num,re=1,an=0;
+    int n,count=0,l[3]={2,3,5},m,i,j=0;
     scanf("%d",&n);
-    while(count<n)
+    for(i=1;count!=n;i++)
     {
-        num=re++;
-    while(num%2==0)
-    {
-        num%=2;
-        if(num==0)
-            break;
+        m=i;
+        while(j!=3)
+        {
+            if(m%l[j]==0)
+                m/=l[j];
+            else
+                j++;
+        }
+        j=0;
+        if(m==1)
+        {
+            count++;
+
+
+        }
     }
-    while(num%3==0)
-    {
-         num%=3;
-         if(num==0)
-            break;
-    }
-    while(num%5==0)
-    {
-        num%=5;
-        if(num==0)
-            break;
-    }
-    if(num%7==0)
-        an++;
-    if(num==0)
-    {
-        count++;
-        an++;
-    }
-    if(num>=1)
-        an++;
-    }
-    if(n==1)
-        an=1;
-    printf("%d",an);
+printf("%d",i-1);
+
 }
