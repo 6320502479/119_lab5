@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int n,count=0,l[3]={2,3,5},m,i,j=0;
+    int n,count=0,l[3]={2,3,5},m,i=1,j=0;
     scanf("%d",&n);
-    for(i=1;count!=n;i++)
+    while(count!=n)
     {
         m=i;
         while(j!=3)
@@ -17,10 +17,9 @@ int main()
         if(m==1)
         {
             count++;
-
-
         }
+        i++;
     }
-printf("%d",i-1);
+ printf("%d",i-1);
 
 }
